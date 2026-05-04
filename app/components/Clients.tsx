@@ -19,20 +19,20 @@ export default function Clients() {
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         
         {/* Row 1: Delivering for Great Businesses */}
-        <div style={{ marginBottom: 'clamp(60px, 10vw, 120px)' }}>
+        <div style={{ marginBottom: 'clamp(40px, 8vw, 100px)' }}>
           <p style={{
-            textAlign: 'center', fontSize: '0.875rem', fontWeight: 800, color: 'var(--navy)',
-            textTransform: 'uppercase', letterSpacing: '0.25em', marginBottom: 40, opacity: 0.8
+            textAlign: 'center', fontSize: '0.75rem', fontWeight: 800, color: 'var(--navy)',
+            textTransform: 'uppercase', letterSpacing: '0.25em', marginBottom: 30, opacity: 0.8
           }}>
             Delivering for Great Businesses
           </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: 'clamp(40px, 8vw, 100px)' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: 'clamp(30px, 6vw, 80px)' }}>
             {mainPartners.map((c, i) => (
               <div key={i} style={{ transition: 'transform 0.3s ease' }} className="hover:scale-110">
                 <img 
                   src={c.logo} 
                   alt={c.name} 
-                  style={{ width: 'clamp(80px, 15vw, ' + c.width + 'px)', height: 'auto', display: 'block' }}
+                  style={{ width: 'clamp(70px, 18vw, ' + c.width + 'px)', height: 'auto', display: 'block' }}
                 />
               </div>
             ))}
@@ -42,18 +42,18 @@ export default function Clients() {
         {/* Row 2: Previous Clients */}
         <div>
           <p style={{
-            textAlign: 'center', fontSize: '0.875rem', fontWeight: 800, color: 'var(--navy)',
-            textTransform: 'uppercase', letterSpacing: '0.25em', marginBottom: 40, opacity: 0.8
+            textAlign: 'center', fontSize: '0.75rem', fontWeight: 800, color: 'var(--navy)',
+            textTransform: 'uppercase', letterSpacing: '0.25em', marginBottom: 30, opacity: 0.8
           }}>
             Previous Clients
           </p>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: 'clamp(40px, 8vw, 100px)' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', gap: 'clamp(30px, 6vw, 80px)' }}>
             {previousClients.map((c, i) => (
               <div key={i} style={{ transition: 'transform 0.3s ease' }} className="hover:scale-110">
                 <img 
                   src={c.logo} 
                   alt={c.name} 
-                  style={{ width: 'clamp(80px, 15vw, ' + c.width + 'px)', height: 'auto', display: 'block' }}
+                  style={{ width: 'clamp(70px, 18vw, ' + c.width + 'px)', height: 'auto', display: 'block' }}
                 />
               </div>
             ))}

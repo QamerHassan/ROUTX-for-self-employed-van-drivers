@@ -40,37 +40,42 @@ export default function Navbar() {
   return (
     <>
       <nav className={`navbar ${scrolled ? 'navbar-scrolled' : 'navbar-transparent'}`} style={{ transition: 'all 0.3s ease' }}>
-        <div style={{ maxWidth: 1400, margin: '0 auto', padding: '0 40px' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 90 }}>
+        <div style={{ maxWidth: 1400, margin: '0 auto', padding: '0 clamp(16px, 4vw, 40px)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: scrolled ? 80 : 90 }}>
             
             {/* Logo */}
-            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 12, textDecoration: 'none', zIndex: 1001 }}>
+            <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 'clamp(8px, 2vw, 12px)', textDecoration: 'none', zIndex: 1001 }}>
               <div style={{
-                width: 44, height: 44, borderRadius: 12,
+                width: scrolled ? 38 : 44, height: scrolled ? 38 : 44, borderRadius: 12,
                 background: 'linear-gradient(135deg,#F97316,#e8650a)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
                 boxShadow: scrolled ? '0 4px 14px rgba(249,115,22,0.3)' : 'none',
+                flexShrink: 0,
+                transition: 'all 0.3s ease'
               }}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width={scrolled ? 20 : 24} height={scrolled ? 20 : 24} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
                 </svg>
               </div>
               <div style={{ visibility: open ? 'hidden' : 'visible' }}>
-                <span style={{ color: 'white', fontWeight: 900, fontSize: '1.4rem', letterSpacing: '-0.02em', display: 'block', lineHeight: 1 }}>ROUTX</span>
-                <span style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 700 }}>LOGISTICS LTD</span>
+                <span style={{ color: 'white', fontWeight: 900, fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', letterSpacing: '-0.02em', display: 'block', lineHeight: 1 }}>ROUTX</span>
+                <span className="hidden sm:block" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 700 }}>LOGISTICS LTD</span>
               </div>
             </Link>
-
-            {/* Desktop Center Links */}
-            <div style={{ 
-              display: 'flex', 
-              gap: 'clamp(20px, 3vw, 40px)', 
-              alignItems: 'center', 
-              position: 'absolute', 
-              left: '50%', 
-              transform: 'translateX(-50%)',
-              visibility: open ? 'hidden' : 'visible'
-            }} className="hidden xl:flex">
+ 
+            {/* Desktop Center Links - STRICTLY hidden on mobile/tablet */}
+            <div 
+              style={{ 
+                display: 'none', 
+                gap: 'clamp(20px, 3vw, 40px)', 
+                alignItems: 'center', 
+                position: 'absolute', 
+                left: '50%', 
+                transform: 'translateX(-50%)',
+                visibility: open ? 'hidden' : 'visible'
+              }} 
+              className="xl:flex"
+            >
               {links.map(l => (
                 <Link key={l.label} href={l.href} className="nav-link" style={{ 
                   fontSize: '0.95rem', 
@@ -82,8 +87,8 @@ export default function Navbar() {
                 </Link>
               ))}
             </div>
-
-            {/* Main Hamburger (Hidden when open to use the internal X) */}
+ 
+            {/* Main Hamburger */}
             {!open && (
               <button
                 onClick={() => setOpen(true)}
@@ -92,7 +97,7 @@ export default function Navbar() {
                   border: 'none', 
                   cursor: 'pointer', 
                   color: 'white', 
-                  padding: '12px',
+                  padding: '10px',
                   zIndex: 1001,
                   display: 'flex',
                   alignItems: 'center',
@@ -101,7 +106,7 @@ export default function Navbar() {
                 className="hover:scale-110"
                 aria-label="Open menu"
               >
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
                   <path d="M3 12h18M3 6h18M3 18h18" />
                 </svg>
               </button>
