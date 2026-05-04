@@ -132,8 +132,12 @@ export default function Navbar() {
               { label: 'Delivery', href: '/delivery-service' },
               { label: 'Courier', href: '/courier-service' },
               { label: 'Removal', href: '/removal' },
+              { label: 'About', href: '/about' },
               { label: 'Business', href: '/business' },
-              { label: 'Enquiry', href: '/enquiry' }
+              { label: 'Enquiry', href: '/enquiry' },
+              { label: 'Help', href: '/help' },
+              { label: 'Blog', href: '/blog' },
+              { label: 'Contact', href: '/contact' }
             ].map((item) => (
               <Link 
                 key={item.label} 
@@ -141,7 +145,7 @@ export default function Navbar() {
                 style={{ 
                   color: 'rgba(255,255,255,0.7)', 
                   textDecoration: 'none', 
-                  fontSize: '0.8rem', 
+                  fontSize: '0.85rem', 
                   fontWeight: 700,
                   textTransform: 'uppercase',
                   letterSpacing: '0.05em'
