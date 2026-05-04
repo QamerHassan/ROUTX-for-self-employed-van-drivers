@@ -128,25 +128,20 @@ export default function Navbar() {
         >
           <div style={{ display: 'inline-flex', gap: '20px', paddingRight: '20px' }}>
             {[
-              { label: 'Man with Van', href: '/man-with-van' },
-              { label: 'Delivery', href: '/delivery-service' },
-              { label: 'Courier', href: '/courier-service' },
-              { label: 'Removal', href: '/removal' },
               { label: 'About', href: '/about' },
               { label: 'Business', href: '/business' },
               { label: 'Enquiry', href: '/enquiry' },
               { label: 'Help', href: '/help' },
-              { label: 'Blog', href: '/blog' },
-              { label: 'Contact', href: '/contact' }
+              { label: 'Blog', href: '/blog' }
             ].map((item) => (
               <Link 
                 key={item.label} 
                 href={item.href} 
                 style={{ 
-                  color: 'rgba(255,255,255,0.7)', 
+                  color: 'rgba(255,255,255,0.85)', 
                   textDecoration: 'none', 
-                  fontSize: '0.85rem', 
-                  fontWeight: 700,
+                  fontSize: '0.9rem', 
+                  fontWeight: 800,
                   textTransform: 'uppercase',
                   letterSpacing: '0.05em'
                 }}
