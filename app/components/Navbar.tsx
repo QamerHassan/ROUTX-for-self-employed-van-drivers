@@ -45,25 +45,23 @@ export default function Navbar() {
     <>
       <nav className={`navbar ${scrolled ? 'navbar-scrolled' : 'navbar-transparent'}`} style={{ transition: 'all 0.3s ease' }}>
         <div style={{ maxWidth: 1400, margin: '0 auto', padding: '0 clamp(16px, 4vw, 40px)' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: scrolled ? 80 : 90 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: scrolled ? 70 : 80 }}>
             
             {/* Logo */}
             <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: 'clamp(8px, 2vw, 12px)', textDecoration: 'none', zIndex: 1001 }}>
               <div style={{
-                width: scrolled ? 38 : 44, height: scrolled ? 38 : 44, borderRadius: 12,
+                width: scrolled ? 34 : 40, height: scrolled ? 34 : 40, borderRadius: 10,
                 background: 'linear-gradient(135deg,#F97316,#e8650a)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                boxShadow: scrolled ? '0 4px 14px rgba(249,115,22,0.3)' : 'none',
                 flexShrink: 0,
                 transition: 'all 0.3s ease'
               }}>
-                <svg width={scrolled ? 20 : 24} height={scrolled ? 20 : 24} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg width={scrolled ? 18 : 22} height={scrolled ? 18 : 22} viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/>
                 </svg>
               </div>
               <div style={{ visibility: open ? 'hidden' : 'visible' }}>
                 <span style={{ color: 'white', fontWeight: 900, fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', letterSpacing: '-0.02em', display: 'block', lineHeight: 1 }}>ROUTX</span>
-                <span className="hidden sm:block" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.65rem', letterSpacing: '0.2em', textTransform: 'uppercase', fontWeight: 700 }}>LOGISTICS LTD</span>
               </div>
             </Link>
  
@@ -106,11 +104,53 @@ export default function Navbar() {
                 className="hover:scale-110"
                 aria-label="Open menu"
               >
-                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5" strokeLinecap="round">
                   <path d="M3 12h18M3 6h18M3 18h18" />
                 </svg>
               </button>
             )}
+          </div>
+        </div>
+
+        {/* Mobile Horizontal Sub-Nav (The "Khali Jaga" fix) */}
+        <div 
+          className="xl:hidden" 
+          style={{ 
+            borderTop: '1px solid rgba(255,255,255,0.05)',
+            background: scrolled ? 'rgba(11,22,40,0.8)' : 'transparent',
+            backdropFilter: 'blur(10px)',
+            overflowX: 'auto',
+            whiteSpace: 'nowrap',
+            padding: '10px 16px',
+            scrollbarWidth: 'none',
+            msOverflowStyle: 'none'
+          }}
+        >
+          <div style={{ display: 'inline-flex', gap: '20px', paddingRight: '20px' }}>
+            {[
+              { label: 'Man with Van', href: '/man-with-van' },
+              { label: 'Delivery', href: '/delivery-service' },
+              { label: 'Courier', href: '/courier-service' },
+              { label: 'Removal', href: '/removal' },
+              { label: 'Business', href: '/business' },
+              { label: 'Enquiry', href: '/enquiry' }
+            ].map((item) => (
+              <Link 
+                key={item.label} 
+                href={item.href} 
+                style={{ 
+                  color: 'rgba(255,255,255,0.7)', 
+                  textDecoration: 'none', 
+                  fontSize: '0.8rem', 
+                  fontWeight: 700,
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.05em'
+                }}
+                className="hover:text-orange"
+              >
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
       </nav>
