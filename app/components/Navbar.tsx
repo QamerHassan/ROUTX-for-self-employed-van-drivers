@@ -16,6 +16,10 @@ export default function Navbar() {
     { label: 'ROUTX FOR BUSINESS', href: '/business' },
     { label: 'BECOME A DRIVER', href: '/drive-with-routx' },
     { label: 'MAKE AN ENQUIRY', href: '/enquiry' },
+    { label: 'MAN WITH A VAN', href: '/man-with-van' },
+    { label: 'DELIVERY SERVICE', href: '/delivery-service' },
+    { label: 'COURIER SERVICE', href: '/courier-service' },
+    { label: 'REMOVAL', href: '/removal' },
     { label: 'HELP', href: '/help' },
     { label: 'CONTACT', href: '/contact' },
   ];
@@ -117,11 +121,13 @@ export default function Navbar() {
         inset: 0,
         background: 'rgba(11, 22, 40, 0.98)',
         backdropFilter: 'blur(30px)',
-        zIndex: 10000, // Very high z-index
+        zIndex: 10000,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
+        paddingTop: '100px',
+        paddingBottom: '60px',
+        overflowY: 'auto', // Ensure it's scrollable
         transition: 'all 0.5s cubic-bezier(0.16, 1, 0.3, 1)',
         opacity: open ? 1 : 0,
         pointerEvents: open ? 'all' : 'none',
@@ -167,9 +173,10 @@ export default function Navbar() {
         <div style={{ 
           display: 'flex', 
           flexDirection: 'column', 
-          gap: '20px', 
+          gap: '12px', 
           textAlign: 'center',
-          marginTop: '40px'
+          width: '100%',
+          padding: '0 24px'
         }}>
           {fullMenuLinks.map((l, i) => (
             <Link 
@@ -180,11 +187,13 @@ export default function Navbar() {
               style={{ 
                 color: 'white', 
                 textDecoration: 'none', 
-                fontSize: '2.8rem', 
+                fontSize: 'min(2.2rem, 8vw)', 
                 fontWeight: 900,
                 letterSpacing: '0.02em',
                 transition: 'all 0.3s ease',
-                animationDelay: `${i * 0.05}s`
+                animationDelay: `${i * 0.04}s`,
+                display: 'block',
+                padding: '8px 0'
               }}
               onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--orange)')}
               onMouseLeave={(e) => (e.currentTarget.style.color = 'white')}
@@ -195,11 +204,10 @@ export default function Navbar() {
         </div>
         
         <div style={{ 
-          position: 'absolute', 
-          bottom: 60, 
+          marginTop: '40px',
           textAlign: 'center',
           color: 'rgba(255,255,255,0.4)',
-          fontSize: '0.9rem'
+          fontSize: '0.85rem'
         }}>
           <p>© 2026 ROUTX LOGISTICS LTD. ALL RIGHTS RESERVED.</p>
         </div>
