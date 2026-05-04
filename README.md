@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚚 ROUTX LOGISTICS LTD — Premium Delivery Network
 
-## Getting Started
+![ROUTX Logistics](public/luxury-delivery.png)
 
-First, run the development server:
+## 🌟 Overview
+**ROUTX LOGISTICS LTD** is a high-fidelity, modern logistics platform designed to bridge the gap between professional self-employed van drivers and businesses/consumers across the UK. Inspired by the sleek aesthetics of top-tier logistics leaders, ROUTX provides a seamless, smartphone-driven experience for everything from single-item deliveries to full-scale office removals.
 
+> "Efficiency delivered with precision. Reliability built on technology."
+
+---
+
+## ✨ Key Features
+
+### 📦 Comprehensive Services
+- **Man with a Van**: Instant booking for small moves and furniture delivery.
+- **Same-Day Courier**: Rapid-response delivery for critical consignments across London.
+- **Professional Removals**: Full-scale residential and commercial moving solutions.
+- **Business Logistics**: Scalable B2B and B2C transport services with timed advanced bookings.
+
+### 🛠️ Cutting-Edge Technology
+- **Real-Time GPS Tracking**: Monitor your delivery's journey live from pick-up to drop-off.
+- **Smart Enquiry System**: Tailored quotes delivered instantly via our intelligent platform.
+- **Fully Responsive Design**: A premium experience on any device, from high-end desktops to mobile phones.
+- **DBS Checked Network**: A trusted fleet of over 120+ accredited professional drivers.
+
+---
+
+## 🚀 Tech Stack
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/) & Vanilla CSS for high-fidelity animations
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Icons**: Lucide React & Custom SVG Icons
+- **Design Inspiration**: Vanr.co.uk (Luxury Logistics Aesthetic)
+
+---
+
+## 📂 Project Structure
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+├── app/
+│   ├── components/       # Premium UI components (Navbar, Footer, Hero, etc.)
+│   ├── contact/          # Live map and contact portal
+│   ├── courier-service/  # Dedicated courier service page
+│   ├── delivery-service/ # Delivery spotlight page
+│   ├── drive-with-routx/ # Driver recruitment and application portal
+│   ├── enquiry/          # Advanced quote request system
+│   ├── help/             # Support center and FAQs
+│   ├── removal/          # Professional removal landing page
+│   └── globals.css       # Core design system and animations
+├── public/               # High-fidelity 8K assets and branding
+└── README.md             # This luxury documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
+- Node.js 18.x or later
+- npm or yarn
 
-## Learn More
+### Installation
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/QamerHassan/ROUTX-for-self-employed-van-drivers.git
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Open the browser**
+   Navigate to [http://localhost:3000](http://localhost:3000) to see the result.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 💼 Business Inquiries
+For partnership opportunities or enterprise-level logistics solutions, please reach out via our [Contact Page](https://github.com/QamerHassan/ROUTX-for-self-employed-van-drivers/tree/main/app/contact) or email us at **info@routx-logistics.com**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## ⚖️ License
+© 2024 ROUTX LOGISTICS LTD. All rights reserved. Professional delivery services nationwide.
