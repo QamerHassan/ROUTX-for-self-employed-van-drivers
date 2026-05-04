@@ -13,15 +13,10 @@ export default function Navbar() {
 
   const fullMenuLinks = [
     { label: 'ABOUT', href: '/about' },
-    { label: 'ROUTX FOR BUSINESS', href: '/business' },
-    { label: 'BECOME A DRIVER', href: '/drive-with-routx' },
-    { label: 'MAKE AN ENQUIRY', href: '/enquiry' },
-    { label: 'MAN WITH A VAN', href: '/man-with-van' },
-    { label: 'DELIVERY SERVICE', href: '/delivery-service' },
-    { label: 'COURIER SERVICE', href: '/courier-service' },
-    { label: 'REMOVAL', href: '/removal' },
+    { label: 'BUSINESS', href: '/business' },
+    { label: 'ENQUIRY', href: '/enquiry' },
     { label: 'HELP', href: '/help' },
-    { label: 'CONTACT', href: '/contact' },
+    { label: 'BLOG', href: '/blog' },
   ];
 
   const [scrolled, setScrolled] = useState(false);
