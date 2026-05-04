@@ -63,19 +63,15 @@ export default function Navbar() {
               </div>
             </Link>
  
-            {/* Desktop Center Links - STRICTLY hidden on mobile/tablet */}
-            <div 
-              style={{ 
-                display: 'none', 
+            {/* Desktop Center Links - STRICTLY hidden on mobile/tablet via CSS */}
+            <div className="hidden xl:flex" style={{ 
                 gap: 'clamp(20px, 3vw, 40px)', 
                 alignItems: 'center', 
                 position: 'absolute', 
                 left: '50%', 
                 transform: 'translateX(-50%)',
                 visibility: open ? 'hidden' : 'visible'
-              }} 
-              className="xl:flex"
-            >
+            }}>
               {links.map(l => (
                 <Link key={l.label} href={l.href} className="nav-link" style={{ 
                   fontSize: '0.95rem', 

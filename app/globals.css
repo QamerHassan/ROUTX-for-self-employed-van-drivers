@@ -164,6 +164,23 @@ body {
   width: 100%;
 }
 
+/* ── Mobile Overrides ── */
+@media (max-width: 1279px) {
+  .xl\:flex {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 60px 20px !important;
+  }
+  
+  .section-title {
+    font-size: 2rem !important;
+  }
+}
+
 /* ── Buttons ── */
 .btn-primary {
   display: inline-flex;

@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero-section" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', paddingTop: 72 }}>
       <div className="hero-grid-pattern" />
       <div style={{ maxWidth: 1200, margin: '0 auto', padding: '80px 24px', width: '100%' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 450px), 1fr))', gap: 60, alignItems: 'center' }} className="hero-grid-layout">
+        <div className="hero-grid-layout grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
           {/* Left */}
           <div className="animate-fade-up">
